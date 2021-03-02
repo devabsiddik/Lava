@@ -1,0 +1,418 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400;1,500;1,900&display=swap');
+
+@import "varmixing";
+@import "utilies";
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+}
+
+html{
+    overflow-x: hidden;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    margin: 1.3rem 0;
+}
+//herader
+
+.header{
+& .nav{
+    transition: none;
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    z-index: 1;
+    width: 1100px;
+    height: 60px;
+    margin: 2rem 0;
+    padding: 0 4rem;
+& .logo{
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #000;
+    &:hover{
+        color: #FBA70B;
+    }
+}
+
+& .navbar{
+    display: flex;
+    margin-left: 22rem;
+
+   & li{
+       padding: 15px 1.5rem;
+       position: relative;
+       & i{
+           font-size: 1rem;
+       }
+       & a{
+           color: #7A7AA3;
+           font-size: 1.1rem;
+           text-transform: capitalize;
+&:hover{
+    color: #FBA70B;
+}
+       }
+   }
+
+// dropwdown menu styling
+   & .sub_menu{
+       position: absolute;
+       z-index: 999;
+       background:#fff;
+       width: 230px;
+       top: 100%;
+opacity: 0;
+visibility: hidden;
+       & li{
+           position: relative;
+        border-bottom: 1px solid #ddd;
+        transition: 0.2s;
+        &:last-child{
+            border-bottom: none;
+        }
+        &:hover{
+            border-left: 5px solid #FBA70B;
+            color: #FBA70B;
+        }
+        & a{
+
+            color: #7A7AA3; 
+        &:hover{
+            color: #FBA70B;
+        }
+        }
+       }
+   }
+
+   & li:hover .sub_menu{
+       opacity: 1;
+       visibility: visible;
+   }
+// sub drop down menu
+& .sub_sub_menu{
+    border-left: 2px solid #FBA70B;
+position: absolute;
+top: 0;
+left: 95%;
+z-index: 999;
+background:#fff;
+width: 240px;
+margin-left: .5rem;
+opacity: 0;
+visibility: hidden;
+ & li a{
+    color: #7A7AA3 !important;
+    &:hover{
+        color: #FBA70B !important;
+    }
+ }
+}
+
+& li ul li:hover .sub_sub_menu{
+    opacity: 1;
+    visibility: visible;
+}
+}
+
+//burger navbar
+.menu_btn{
+    display: none;
+}
+}
+
+//active classes
+.navbar li:hover a{
+    color: #FBA70B;
+}
+.navbar li:hover .drop{
+    color: #FBA70B;
+}
+
+//sub dropdown menu active clasese
+.navbar li .sub_menu li:hover a{
+    color: #FBA70B;
+}
+.navbar li .sub_menu li:hover i{
+    color: #FBA70B;
+}
+
+//active classes end
+
+& .hero_text{
+    margin-top: 4rem;
+padding-left: 3rem;
+& h1{
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    width: 70%;
+}
+& span{
+    color: #FBA70B;
+}
+
+& p{
+    margin: 1rem 0;
+    width: 60%;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    color: #8E7AA3;
+    font-weight: normal;
+}
+}
+
+& .banner_img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 64%;
+}
+}
+
+//features section
+
+.features{
+    margin-top: 22rem;
+    & .common{
+        letter-spacing: 2px;
+        color: #FBA70B;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 2.3rem;
+    }
+
+    & .card{
+        & h2{
+            text-transform: capitalize;
+            margin-top: .5rem;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+//advatise section
+
+section.advatise{
+    height: 120vh;
+    margin: -8rem 0 1rem;
+    & .first{
+height: 50%;
+    }
+    & .second{
+position: relative;
+top: -550px;
+left: 50px;
+    }
+   
+& .advatise_right {
+margin: 12rem 0 0;
+overflow: hidden;
+& .card_advatise{
+    width: 90%;
+text-align: center;
+padding: .5rem;
+& h1{
+    font-weight: 400;
+}
+
+& p{
+    color: #7A7AA3;
+    width: 100%;
+}
+    & img{
+        float: left;
+        margin: 1rem .5rem 0 0;
+    }
+}
+}
+}
+
+//clients
+
+.clients{
+    height: 100vh;
+padding-top: 1rem;
+width: 100%;
+
+& .container-client{
+    padding: 0 3rem;
+}
+
+&  h1{
+    color: #000;
+    letter-spacing: 2px;
+    font-size: 3rem;margin: 1rem 0 4rem;
+    text-align: center;
+    & span{
+        color: #FBA70B;
+    }
+}
+
+.glide__slide{
+    border-radius: 5px;
+    background: $gradient-color;
+   overflow-x: hidden !important;
+    & h2,i,p{
+       color: #f7f7f7;
+   }
+
+}
+ & .glide__arrows button{
+     cursor: pointer;
+background: $gradient-color;
+color: #f7f7f7;
+border: none;
+font-size: 22px;
+border-radius: 5px;
+padding: 20px;
+&:focus{
+    outline: none;
+}
+&:first-child{
+    position: absolute;
+left: -20px;
+top: 40%;
+} 
+&:last-child{
+    position: absolute;
+right:  -20px;
+top: 40%;
+} 
+}
+
+}
+
+//footer area
+
+.footer {
+
+    width: 100vw;
+    margin-top:6rem;
+    background: $gradient-color;
+    padding: 12rem 0 3rem;
+  position: relative;
+&::before,
+&::after
+{
+    height: 143px;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #fff;
+top: -10px;
+    transform: skewY(-8deg);
+}
+
+&::after{
+    top: -60px;
+    transform: skewY(-3deg);
+
+}
+
+//grid
+& .grid{
+    gap:15px;
+}
+//footer right styling
+
+.footer_right{
+    h1{
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 3rem;
+        letter-spacing: 3px;
+    & span{
+        color: #FBA70B;
+    }
+    }
+
+& p{
+    color:#fff;
+    font-family: 'Roboto', sans-serif;}
+
+    & .social_icons i{
+        font-size: 1.1rem;
+margin: 1rem .8rem;
+padding: 1rem;
+background: transparent;
+color:#fff;
+border: 1px solid #fff;
+border-radius: 50%;
+&:hover{
+    background: #FBA70B;
+}    
+}
+}
+
+//footer left styling
+.footer_left{
+    & form {
+        text-align: center;
+        border-radius: 3px;
+        height: 420px;
+        width: 500px;
+        padding: 1rem .5rem 0;
+        background: #fff;
+        box-shadow: 0 20px 10px 2px rgba(0, 0, 0, 0.1);
+    input,textarea{
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 3px;
+        margin: 1rem;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    & textarea{
+     width:80%;
+        resize: none;
+    }
+    & a{
+        padding: .7rem 1rem;
+    }
+}
+
+}
+}
+
+//last_footer
+
+.last_footer{
+    background: $gradient-color;
+    padding: 2rem;
+    border-top: 1px solid #f7f7f7;
+    & p{
+text-align: center;
+color: #f7f7f7;
+    }
+}
+
+@import "media";
